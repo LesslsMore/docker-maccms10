@@ -6,6 +6,10 @@ if [ ! -f index.php ]; then
     rm -rf .git*
     chmod a+rw -R application runtime upload static addons
     echo "maccms10 downloaded"
+    
+    git clone --depth 1 -q https://github.com/LesslsMore/template.git template
+    chmod a+rw -R template
+    echo "template downloaded"
 fi
 
 if [ -f admin.php ]; then
